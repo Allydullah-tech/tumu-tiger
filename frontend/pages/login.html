@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingia — TUMU TIGER</title>
+<link rel="stylesheet" href="../css/style.css?v=4">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1F8A56">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TUMU TIGER">
+<script src="../js/config.js?v=4"></script>
+<script src="../js/pwa.js?v=1" defer></script>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h2>Karibu Tena</h2>
+    <p class="sub">Ingia kwenye akaunti yako kuendelea kuomba na kufuatilia filamu.</p>
+
+    <div id="alertBox"></div>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label>Barua Pepe</label>
+        <input type="email" name="email" required autofocus>
+      </div>
+      <div class="form-group">
+        <label>Nenosiri</label>
+        <input type="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Ingia</button>
+    </form>
+    <div class="auth-footer">
+      <a href="forgot-password.html">Umesahau nenosiri?</a>
+    </div>
+    <div class="auth-footer">Huna akaunti? <a href="register.html">Jisajili sasa</a></div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="../js/api.js?v=4"></script>
+<script src="../js/ui.js?v=4"></script>
+<script src="../js/main.js?v=4"></script>
+<script src="../js/pages/login.js?v=4"></script>
+</body>
+</html>

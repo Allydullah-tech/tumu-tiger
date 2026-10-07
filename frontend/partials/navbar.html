@@ -1,0 +1,26 @@
+<header class="navbar">
+  <div class="container">
+    <a href="/frontend/index.html" class="brand" id="brandLink"><span class="mark">🐯</span> TUMU <span class="hi">TIGER</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/frontend/index.html">Nyumbani</a>
+      <a href="/frontend/pages/movies.html">Filamu</a>
+      <a href="/frontend/index.html#jinsi-inavyofanya-kazi">Jinsi Inavyofanya Kazi</a>
+      <a href="/frontend/pages/track.html">Fuatilia Ombi</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="/frontend/pages/login.html" id="navLoginLink" class="btn btn-ghost btn-sm">Ingia</a>
+      <a href="/frontend/pages/register.html" id="navRegisterLink" class="btn btn-primary btn-sm">Jisajili</a>
+      <a href="#" id="navPanelLink" class="btn btn-outline btn-sm" style="display:none;">Paneli Yangu</a>
+      <a href="#" id="navLogoutLink" class="btn btn-primary btn-sm" style="display:none;">Toka</a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+<script>
+  // Fix relative hrefs to be correct regardless of deployment subpath
+  (function () {
+    document.querySelectorAll('.navbar [href^="/frontend/"]').forEach(function (a) {
+      a.setAttribute('href', TT.FRONTEND_BASE + a.getAttribute('href').replace('/frontend', ''));
+    });
+  })();
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wasifu Wangu — TUMU TIGER</title>
+<link rel="stylesheet" href="../../css/style.css?v=4">
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#1F8A56">
+<link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TUMU TIGER">
+<script src="../../js/config.js?v=4"></script>
+<script src="../../js/pwa.js?v=1" defer></script>
+</head>
+<body data-active-page="profile">
+<div class="app-shell">
+  <div id="sidebar-placeholder"></div>
+  <main class="main-content">
+    <div class="topbar"><div><h1>Wasifu Wangu</h1><p class="text-dim">Simamia taarifa zako binafsi na nenosiri.</p></div></div>
+
+    <div id="alertBox"></div>
+
+    <div class="card">
+      <h3 class="mb-16">Taarifa Binafsi</h3>
+      <form id="profileForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Jina Kamili</label>
+            <input type="text" name="full_name" id="fullNameInput" required>
+          </div>
+          <div class="form-group">
+            <label>Namba ya Simu</label>
+            <input type="tel" name="phone" id="phoneInput" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Barua Pepe</label>
+          <input type="email" id="emailInput" disabled>
+          <p class="hint">Barua pepe haiwezi kubadilishwa.</p>
+        </div>
+        <button type="submit" class="btn btn-primary">Hifadhi Mabadiliko</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h3 class="mb-16">Badilisha Nenosiri</h3>
+      <form id="passwordForm">
+        <div class="form-group">
+          <label>Nenosiri la Sasa</label>
+          <input type="password" name="current_password" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nenosiri Jipya</label>
+            <input type="password" name="new_password" required>
+          </div>
+          <div class="form-group">
+            <label>Thibitisha Nenosiri Jipya</label>
+            <input type="password" name="confirm_password" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline">Badilisha Nenosiri</button>
+      </form>
+    </div>
+  </main>
+</div>
+
+<script src="../../js/api.js?v=4"></script>
+<script src="../../js/ui.js?v=4"></script>
+<script src="../../js/auth-guard.js?v=4"></script>
+<script src="../../js/main.js?v=4"></script>
+<script src="../../js/pages/customer-profile.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* =========================================================
+   TUMU TIGER — Landing page size overrides
+   Loaded ONLY by frontend/index.html, after style.css. Restores the
+   more spacious "before" sizing for the landing page specifically,
+   while admin/customer panels keep the more compact base sizing
+   from style.css. Same cascade origin/specificity, so simply being
+   loaded later means these rules win for the selectors they repeat.
+   ========================================================= */
+
+h1{font-size:clamp(2rem, 5.5vw, 3.4rem);}
+h2{font-size:clamp(1.5rem, 3vw, 2.2rem);}
+
+.hero{padding:48px 0 40px;}
+@media (max-width:640px){ .hero{padding:30px 0 26px;} }
+.hero-grid{gap:40px; align-items:flex-start;}
+.hero h1{margin:12px 0 14px;}
+.hero p.lead{font-size:1rem; max-width:500px; margin-bottom:24px;}
+.hero-actions{gap:12px;}
+
+.search-box{margin-top:22px; max-width:480px; padding:7px; border-radius:14px;}
+.search-box input{padding:11px 13px; font-size:.95rem;}
+
+.hero-visual{gap:13px;}
+.hero-visual .poster{border-radius:11px;}
+.hero-visual .poster:nth-child(2){transform:translateY(-16px);}
+.hero-visual .poster svg{width:30%;}
+
+.stats-row{gap:28px; margin-top:26px;}
+.stat b{font-size:1.7rem;}
+.stat span{font-size:.78rem;}
+
+.trust-row{margin-bottom:16px; gap:10px;}
+.trust-row span{padding:8px 14px; font-size:.72rem; border-radius:999px;}
+
+.section{padding:44px 0;}
+@media (max-width:640px){ .section{padding:30px 0;} }
+.section-head p{font-size:.92rem; max-width:500px;}
+
+#filamu .movie-grid{grid-template-columns:repeat(auto-fill, minmax(160px, 1fr)); gap:18px;}
+#filamu .movie-body{padding:13px 13px 15px;}
+#filamu .movie-body h4{font-size:1rem;}
+#filamu .movie-meta{font-size:.78rem;}
+
+.simple-section{padding:34px 0;}
+.simple-grid{gap:44px;}
+.simple-list li{padding:12px 0; font-size:.92rem;}
+
+.features .feature{padding:22px;}
+.steps .step{padding:22px;}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuatilia Ombi — TUMU TIGER</title>
+<link rel="stylesheet" href="../css/style.css?v=4">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1F8A56">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TUMU TIGER">
+<script src="../js/config.js?v=4"></script>
+<script src="../js/pwa.js?v=1" defer></script>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+
+<section class="section" style="padding-top:14px; max-width:600px; margin:0 auto;">
+  <div class="container">
+    <span class="eyebrow">UFUATILIAJI</span>
+    <h1 class="mt-8">Fuatilia Ombi Lako</h1>
+    <p class="text-dim mt-8">Tumia msimbo wa ufuatiliaji AU namba yako ya simu uliyotumia kuomba.</p>
+
+    <div class="pill-select mt-16" id="trackModeSwitch">
+      <label><input type="radio" name="track_mode" value="code" checked><span>Msimbo wa Ufuatiliaji</span></label>
+      <label><input type="radio" name="track_mode" value="phone"><span>Namba ya Simu</span></label>
+    </div>
+
+    <form id="trackFormCode" class="card mt-16">
+      <div class="form-group">
+        <label>Msimbo wa Ufuatiliaji</label>
+        <input type="text" name="code" id="codeInput" placeholder="Mfano: TT-4F92A1" style="text-transform:uppercase;" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Fuatilia</button>
+    </form>
+
+    <form id="trackFormPhone" class="card mt-16" style="display:none;">
+      <div class="form-group">
+        <label>Namba ya Simu Uliyotumia Kuomba</label>
+        <input type="tel" name="phone" id="phoneInput" placeholder="Mfano: 0628828678" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Tafuta Maombi Yangu</button>
+    </form>
+
+    <div id="listBox"></div>
+    <div id="resultBox"></div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="../js/api.js?v=4"></script>
+<script src="../js/ui.js?v=4"></script>
+<script src="../js/main.js?v=4"></script>
+<script src="../js/pages/track.js?v=4"></script>
+</body>
+</html>

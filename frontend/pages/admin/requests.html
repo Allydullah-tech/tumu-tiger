@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maombi ya Wateja — TUMU TIGER</title>
+<link rel="stylesheet" href="../../css/style.css?v=4">
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#1F8A56">
+<link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TUMU TIGER">
+<script src="../../js/config.js?v=4"></script>
+<script src="../../js/pwa.js?v=1" defer></script>
+</head>
+<body data-active-page="requests">
+<div class="app-shell">
+  <div id="sidebar-placeholder"></div>
+  <main class="main-content">
+    <div class="topbar"><div><h1>Maombi ya Wateja</h1><p class="text-dim">Angalia na jibu maombi na maswali ya wateja kuhusu filamu.</p></div></div>
+
+    <div id="alertBox"></div>
+
+    <!-- Detail / respond view -->
+    <div class="card" id="detailView" style="display:none;">
+      <a href="requests.html" class="btn btn-ghost btn-sm mb-16">← Rudi kwenye Orodha</a>
+      <div id="detailContent"></div>
+    </div>
+
+    <!-- List view -->
+    <div id="listView">
+      <div class="card mb-16">
+        <form id="filterForm" class="flex gap-12" style="flex-wrap:wrap;">
+          <select name="status" id="statusFilter" style="max-width:220px;">
+            <option value="">Hali Zote</option>
+            <option value="pending">Inasubiri</option>
+            <option value="in_review">Inashughulikiwa</option>
+            <option value="available">Ipo Maktabani</option>
+            <option value="not_available">Haipo Kwa Sasa</option>
+            <option value="replied">Imejibiwa</option>
+          </select>
+          <select name="type" id="typeFilter" style="max-width:220px;">
+            <option value="">Aina Zote</option>
+            <option value="order">Ombi la Filamu</option>
+            <option value="inquiry">Swali kuhusu Filamu</option>
+          </select>
+          <button type="submit" class="btn btn-outline btn-sm">Chuja</button>
+        </form>
+      </div>
+      <div id="requestsTableWrap"><p class="text-dim">Inapakia...</p></div>
+    </div>
+  </main>
+</div>
+
+<script src="../../js/api.js?v=4"></script>
+<script src="../../js/ui.js?v=4"></script>
+<script src="../../js/auth-guard.js?v=4"></script>
+<script src="../../js/main.js?v=4"></script>
+<script src="../../js/pages/admin-requests.js?v=4"></script>
+</body>
+</html>

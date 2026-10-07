@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashibodi Yangu — TUMU TIGER</title>
+<link rel="stylesheet" href="../../css/style.css?v=4">
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#1F8A56">
+<link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TUMU TIGER">
+<script src="../../js/config.js?v=4"></script>
+<script src="../../js/pwa.js?v=1" defer></script>
+</head>
+<body data-active-page="dashboard">
+<div class="app-shell">
+  <div id="sidebar-placeholder"></div>
+  <main class="main-content">
+    <div class="topbar">
+      <div>
+        <h1 id="greeting">Habari 👋</h1>
+        <p class="text-dim">Karibu kwenye paneli yako ya TUMU TIGER.</p>
+      </div>
+      <a href="../movies.html" class="btn btn-primary">+ Omba Filamu Nyingine</a>
+    </div>
+
+    <div id="alertBox"></div>
+
+    <div class="kpi-grid">
+      <div class="kpi"><b id="kpiTotal">0</b><span>Jumla ya Maombi</span></div>
+      <div class="kpi"><b id="kpiPending">0</b><span>Yanayosubiri Majibu</span></div>
+      <div class="kpi"><b id="kpiAvailable">0</b><span>Filamu Zilizopatikana</span></div>
+    </div>
+
+    <div class="card">
+      <div class="flex between center mb-16">
+        <h3>Maombi ya Karibuni</h3>
+        <a href="requests.html" class="btn btn-ghost btn-sm">Angalia Yote →</a>
+      </div>
+      <div id="recentRequests"><p class="text-dim">Inapakia...</p></div>
+    </div>
+
+    <div class="card">
+      <div class="flex between center mb-16">
+        <h3>Filamu Mpya Zilizoongezwa</h3>
+        <a href="../movies.html" class="btn btn-ghost btn-sm">Vinjari Zote →</a>
+      </div>
+      <div class="movie-grid" id="latestMovies"></div>
+    </div>
+  </main>
+</div>
+
+<script src="../../js/api.js?v=4"></script>
+<script src="../../js/ui.js?v=4"></script>
+<script src="../../js/auth-guard.js?v=4"></script>
+<script src="../../js/main.js?v=4"></script>
+<script src="../../js/pages/customer-dashboard.js?v=4"></script>
+</body>
+</html>

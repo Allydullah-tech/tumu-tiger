@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashibodi ya Msimamizi — TUMU TIGER</title>
+<link rel="stylesheet" href="../../css/style.css?v=4">
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#1F8A56">
+<link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TUMU TIGER">
+<script src="../../js/config.js?v=4"></script>
+<script src="../../js/pwa.js?v=1" defer></script>
+</head>
+<body data-active-page="dashboard">
+<div class="app-shell">
+  <div id="sidebar-placeholder"></div>
+  <main class="main-content">
+    <div class="topbar">
+      <div>
+        <h1 id="greeting">Karibu 🐯</h1>
+        <p class="text-dim">Muhtasari wa shughuli za TUMU TIGER.</p>
+      </div>
+      <a href="upload-movie.html" class="btn btn-primary">+ Pakia Filamu Mpya</a>
+    </div>
+
+    <div id="alertBox"></div>
+
+    <div class="kpi-grid">
+      <div class="kpi"><b id="kpiMovies">0</b><span>Jumla ya Filamu</span></div>
+      <div class="kpi"><b id="kpiPending">0</b><span>Maombi Yanayosubiri</span></div>
+      <div class="kpi"><b id="kpiRequests">0</b><span>Jumla ya Maombi</span></div>
+      <div class="kpi"><b id="kpiCustomers">0</b><span>Wateja Waliojisajili</span></div>
+      <div class="kpi"><b id="kpiPayments">0</b><span>Malipo Yanayosubiri Uthibitisho</span></div>
+    </div>
+
+    <div class="card">
+      <div class="flex between center mb-16">
+        <h3>Maombi ya Karibuni ya Wateja</h3>
+        <a href="requests.html" class="btn btn-ghost btn-sm">Angalia Yote →</a>
+      </div>
+      <div id="recentRequests"><p class="text-dim">Inapakia...</p></div>
+    </div>
+  </main>
+</div>
+
+<script src="../../js/api.js?v=4"></script>
+<script src="../../js/ui.js?v=4"></script>
+<script src="../../js/auth-guard.js?v=4"></script>
+<script src="../../js/main.js?v=4"></script>
+<script src="../../js/pages/admin-dashboard.js?v=4"></script>
+</body>
+</html>

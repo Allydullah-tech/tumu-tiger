@@ -1,0 +1,16 @@
+# TUMU TIGER
+
+# Generated on install — contains DB credentials, never commit this
+backend/config/config.php
+backend/install.lock
+
+# Uploaded movie covers (user-generated content)
+backend/uploads/covers/*
+!backend/uploads/covers/.htaccess
+!backend/uploads/covers/.gitkeep
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

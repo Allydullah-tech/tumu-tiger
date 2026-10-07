@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filamu Zote — TUMU TIGER</title>
+<meta name="description" content="Vinjari filamu zote zilizopo kwenye maktaba ya TUMU TIGER na utafute unayoitafuta.">
+<link rel="stylesheet" href="../css/style.css?v=4">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1F8A56">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TUMU TIGER">
+<script src="../js/config.js?v=4"></script>
+<script src="../js/pwa.js?v=1" defer></script>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+
+<section class="section" style="padding-top:14px;">
+  <div class="container">
+    <span class="eyebrow">KATALOGI KAMILI</span>
+    <h1 class="mt-8">Filamu Zote</h1>
+    <p class="text-dim mt-8">Tafuta filamu unayoitafuta kwa jina au aina yake.</p>
+
+    <form class="search-box mt-16" id="searchForm" style="max-width:480px;">
+      <input type="text" name="q" id="searchInput" placeholder="Tafuta jina la filamu au aina yake...">
+      <button type="submit" class="btn btn-primary btn-sm">Tafuta</button>
+    </form>
+
+    <div class="mt-24" id="movieGridWrap">
+      <div class="movie-grid" id="movieGrid"></div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="../js/api.js?v=4"></script>
+<script src="../js/ui.js?v=4"></script>
+<script src="../js/main.js?v=4"></script>
+<script src="../js/pages/movies.js?v=4"></script>
+</body>
+</html>

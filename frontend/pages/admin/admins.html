@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wasimamizi — TUMU TIGER</title>
+<link rel="stylesheet" href="../../css/style.css?v=4">
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#1F8A56">
+<link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TUMU TIGER">
+<script src="../../js/config.js?v=4"></script>
+<script src="../../js/pwa.js?v=1" defer></script>
+</head>
+<body data-active-page="admins">
+<div class="app-shell">
+  <div id="sidebar-placeholder"></div>
+  <main class="main-content">
+    <div class="topbar"><div><h1>Wasimamizi (Admins)</h1><p class="text-dim">Ongeza wasimamizi wapya wa mfumo. Hakuna usajili wa umma wa wasimamizi — huu ndio ukurasa pekee wa kuwaongeza.</p></div></div>
+
+    <div id="alertBox"></div>
+
+    <div class="card mb-16">
+      <h3 class="mb-16">Orodha ya Wasimamizi</h3>
+      <div id="adminsTableWrap"><p class="text-dim">Inapakia...</p></div>
+    </div>
+
+    <div class="card" style="max-width:640px;">
+      <h3 class="mb-16">Ongeza Msimamizi Mpya</h3>
+      <form id="addAdminForm">
+        <div class="form-group">
+          <label>Jina Kamili</label>
+          <input type="text" name="full_name" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Barua Pepe</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Namba ya Simu</label>
+            <input type="tel" name="phone" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nenosiri</label>
+            <input type="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label>Thibitisha Nenosiri</label>
+            <input type="password" name="confirm_password" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Swali la Usalama (kwa kurejesha nenosiri)</label>
+          <select name="security_question" id="secQSelect">
+            <option value="Jina la mnyama wako wa kwanza ni nani?">Jina la mnyama wako wa kwanza ni nani?</option>
+            <option value="Shule yako ya msingi iliitwaje?">Shule yako ya msingi iliitwaje?</option>
+            <option value="Mji ulikozaliwa ni upi?">Mji ulikozaliwa ni upi?</option>
+            <option value="Jina la kwanza la mama yako mzazi ni nani?">Jina la kwanza la mama yako mzazi ni nani?</option>
+            <option value="Rangi unayoipenda zaidi ni ipi?">Rangi unayoipenda zaidi ni ipi?</option>
+            <option value="custom">Andika swali lingine...</option>
+          </select>
+        </div>
+        <div class="form-group" id="customQWrap" style="display:none;">
+          <label>Swali</label>
+          <input type="text" name="security_question_custom">
+        </div>
+        <div class="form-group">
+          <label>Jibu la Swali</label>
+          <input type="text" name="security_answer" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Ongeza Msimamizi</button>
+      </form>
+    </div>
+  </main>
+</div>
+
+<script src="../../js/api.js?v=4"></script>
+<script src="../../js/ui.js?v=4"></script>
+<script src="../../js/auth-guard.js?v=4"></script>
+<script src="../../js/main.js?v=4"></script>
+<script src="../../js/pages/admin-admins.js?v=4"></script>
+</body>
+</html>

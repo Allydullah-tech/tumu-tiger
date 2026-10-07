@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TUMU TIGER — Maktaba ya Filamu</title>
+<meta name="description" content="TUMU TIGER — Maktaba kubwa ya filamu. Vinjari, omba na fuatilia maombi yako ya filamu unazozipenda.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231F8A56%22/><text x=%2250%22 y=%2268%22 font-size=%2258%22 text-anchor=%22middle%22 fill=%22%23FFFFFF%22 font-family=%22sans-serif%22>T</text></svg>">
+<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1F8A56">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TUMU TIGER">
+<link rel="stylesheet" href="css/landing.css?v=4">
+<script src="js/config.js?v=4"></script>
+<script src="js/pwa.js?v=1" defer></script>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="trust-row">
+        <span>🎬 Vifuniko 100+</span>
+        <span>🔒 Malipo Salama</span>
+        <span>📦 Tunatuma Kote Tanzania</span>
+        <span>⚡ Majibu ya Haraka</span>
+      </div>
+      <span class="eyebrow">MAKTABA #1 YA FILAMU TANZANIA</span>
+      <h1>Filamu unayoipenda, <em>tunakuletea kwako.</em></h1>
+      <p class="lead">Vinjari maelfu ya vifuniko vya filamu, omba unayotaka kwa taarifa zako za mawasiliano, na fuatilia hali ya ombi lako moja kwa moja hadi tuwasiliane nawe.</p>
+      <div class="hero-actions">
+        <a href="#filamu" class="btn btn-primary">Vinjari Filamu 🎬</a>
+        <a href="pages/track.html" class="btn btn-outline" id="trackLink">Fuatilia Ombi Langu</a>
+      </div>
+
+      <form class="search-box" id="heroSearchForm" action="pages/movies.html" method="GET">
+        <input type="text" name="q" id="heroSearch" placeholder="Tafuta jina la filamu au aina yake...">
+        <button type="submit" class="btn btn-primary btn-sm">Tafuta</button>
+      </form>
+
+      <div class="stats-row">
+        <div class="stat"><b id="statMovies">0+</b><span>Vifuniko vya Filamu</span></div>
+        <div class="stat"><b id="statAvailable">0+</b><span>Zilizopo Sasa</span></div>
+        <div class="stat"><b id="statPlaceholder">100%</b><span>Huduma Mtandaoni</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" id="heroVisual">
+      <div class="poster"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:32%;"><path d="M8 24 L13 9 H22 L18 24 Z"/><path d="M22 24 L27 9 H36 L32 24 Z"/><path d="M36 24 L41 9 H50 L46 24 Z"/><rect x="8" y="24" width="48" height="30" rx="4"/><line x1="8" y1="24" x2="56" y2="24"/></svg></div>
+      <div class="poster"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:32%;"><path d="M8 24 L13 9 H22 L18 24 Z"/><path d="M22 24 L27 9 H36 L32 24 Z"/><path d="M36 24 L41 9 H50 L46 24 Z"/><rect x="8" y="24" width="48" height="30" rx="4"/><line x1="8" y1="24" x2="56" y2="24"/></svg></div>
+      <div class="poster"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:32%;"><path d="M8 24 L13 9 H22 L18 24 Z"/><path d="M22 24 L27 9 H36 L32 24 Z"/><path d="M36 24 L41 9 H50 L46 24 Z"/><rect x="8" y="24" width="48" height="30" rx="4"/><line x1="8" y1="24" x2="56" y2="24"/></svg></div>
+      <div class="poster"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:32%;"><path d="M8 24 L13 9 H22 L18 24 Z"/><path d="M22 24 L27 9 H36 L32 24 Z"/><path d="M36 24 L41 9 H50 L46 24 Z"/><rect x="8" y="24" width="48" height="30" rx="4"/><line x1="8" y1="24" x2="56" y2="24"/></svg></div>
+      <div class="poster"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:32%;"><path d="M8 24 L13 9 H22 L18 24 Z"/><path d="M22 24 L27 9 H36 L32 24 Z"/><path d="M36 24 L41 9 H50 L46 24 Z"/><rect x="8" y="24" width="48" height="30" rx="4"/><line x1="8" y1="24" x2="56" y2="24"/></svg></div>
+      <div class="poster"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:32%;"><path d="M8 24 L13 9 H22 L18 24 Z"/><path d="M22 24 L27 9 H36 L32 24 Z"/><path d="M36 24 L41 9 H50 L46 24 Z"/><rect x="8" y="24" width="48" height="30" rx="4"/><line x1="8" y1="24" x2="56" y2="24"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<div class="sprocket-stripe"></div>
+
+<section class="section" id="filamu">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">KATALOGI</span>
+        <h2>Filamu Zilizopo Maktabani</h2>
+        <p>Chagua filamu unayoipenda, bofya "Omba Filamu Hii" na ujaze taarifa zako — tutakujulisha hali ya ombi lako.</p>
+      </div>
+      <a href="pages/movies.html" class="btn btn-primary btn-sm">Ona Filamu Zote →</a>
+    </div>
+
+    <div id="movieGridWrap">
+      <div class="movie-grid" id="movieGrid"></div>
+    </div>
+
+    <div class="text-center mt-24">
+      <a href="pages/movies.html" class="btn btn-outline">Ona Filamu Zote Maktabani →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section simple-section" id="jinsi-inavyofanya-kazi">
+  <div class="container">
+    <div class="simple-grid">
+      <div>
+        <span class="eyebrow">JINSI INAVYOFANYA KAZI</span>
+        <h2 class="mt-8 mb-16">Hatua Tatu Rahisi</h2>
+        <ul class="simple-list">
+          <li><b>01.</b> Vinjari na chagua filamu unayoipenda kwenye ukurasa wetu.</li>
+          <li><b>02.</b> Omba kwa kujaza jina lako na namba ya simu.</li>
+          <li><b>03.</b> Fuatilia hali ya ombi kwa msimbo wako wa ufuatiliaji.</li>
+        </ul>
+      </div>
+      <div>
+        <span class="eyebrow">KWA NINI TUMU TIGER</span>
+        <h2 class="mt-8 mb-16">Tunakuletea Bora Zaidi</h2>
+        <ul class="simple-list">
+          <li><b>✓</b> Maktaba kubwa ya filamu za aina zote.</li>
+          <li><b>✓</b> Majibu ya haraka kutoka kwa timu yetu.</li>
+          <li><b>✓</b> Taarifa zako za mawasiliano ni salama.</li>
+          <li><b>✓</b> Ufuatiliaji wa wazi kwa kila ombi.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section text-center" style="padding-top:20px; padding-bottom:70px;">
+  <div class="container">
+    <span class="eyebrow">JIUNGE NASI</span>
+    <h2 class="mt-8">Uko Tayari Kupata Filamu Unayoipenda?</h2>
+    <p class="text-dim mt-8" style="max-width:520px; margin:8px auto 26px;">Jisajili leo, omba filamu zako, na uwe wa kwanza kujua zinapopatikana.</p>
+    <a href="pages/register.html" class="btn btn-primary" id="ctaRegister">Fungua Akaunti Bure</a>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/api.js?v=4"></script>
+<script src="js/ui.js?v=4"></script>
+<script src="js/main.js?v=4"></script>
+<script src="js/pages/index.js?v=4"></script>
+</body>
+</html>

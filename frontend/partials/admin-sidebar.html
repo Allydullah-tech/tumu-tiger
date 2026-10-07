@@ -1,0 +1,56 @@
+<div class="mobile-topbar">
+  <button class="panel-hamburger" id="sidebarToggle" aria-label="Fungua menyu">☰</button>
+  <span class="mobile-topbar-brand">🐯 TUMU <span class="hi">TIGER</span></span>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<aside class="sidebar" id="panelSidebar">
+  <a href="/frontend/pages/admin/dashboard.html" class="brand"><span class="mark">🐯</span> TUMU <span class="hi">TIGER</span></a>
+
+  <p class="side-section-title">Msimamizi</p>
+  <a href="/frontend/pages/admin/dashboard.html" class="side-link" data-page="dashboard"><span class="ico">🏠</span> Dashibodi</a>
+  <a href="/frontend/pages/admin/requests.html" class="side-link" data-page="requests"><span class="ico">📨</span> Maombi ya Wateja</a>
+
+  <p class="side-section-title">Filamu</p>
+  <a href="/frontend/pages/admin/movies.html" class="side-link" data-page="movies"><span class="ico">🎞️</span> Filamu Zote</a>
+  <a href="/frontend/pages/admin/upload-movie.html" class="side-link" data-page="upload"><span class="ico">⬆️</span> Pakia Kifuniko</a>
+
+  <p class="side-section-title">Usimamizi</p>
+  <a href="/frontend/pages/admin/admins.html" class="side-link" data-page="admins"><span class="ico">🛡️</span> Wasimamizi (Admins)</a>
+  <a href="/frontend/pages/admin/profile.html" class="side-link" data-page="profile"><span class="ico">👤</span> Wasifu Wangu</a>
+
+  <p class="side-section-title">Tovuti</p>
+  <a href="/frontend/index.html" class="side-link"><span class="ico">🌐</span> Tazama Tovuti</a>
+
+  <div class="side-user">
+    <div class="avatar" id="sideAvatar">?</div>
+    <div class="who" id="sideWho">…<small>Msimamizi</small></div>
+  </div>
+  <a href="#" class="side-link mt-8" id="sideLogout"><span class="ico">🚪</span> Toka</a>
+</aside>
+<script>
+  (function () {
+    document.querySelectorAll('.mobile-topbar [href^="/frontend/"], .sidebar [href^="/frontend/"]').forEach(function (a) {
+      a.setAttribute('href', TT.FRONTEND_BASE + a.getAttribute('href').replace('/frontend', ''));
+    });
+    var current = document.body.getAttribute('data-active-page');
+    document.querySelectorAll('.sidebar .side-link[data-page]').forEach(function (a) {
+      if (a.getAttribute('data-page') === current) a.classList.add('active');
+    });
+    document.getElementById('sideLogout').addEventListener('click', async function (e) {
+      e.preventDefault();
+      await apiPostJSON('/auth/logout.php', {});
+      window.location.href = TT.FRONTEND_BASE + '/index.html';
+    });
+
+    // Mobile drawer: hamburger opens sidebar as a fixed overlay that stays in
+    // place (doesn't jump) and only moves with the page when you scroll it.
+    var sidebar = document.getElementById('panelSidebar');
+    var overlay = document.getElementById('sidebarOverlay');
+    var toggle = document.getElementById('sidebarToggle');
+    function openDrawer() { sidebar.classList.add('open'); overlay.classList.add('show'); }
+    function closeDrawer() { sidebar.classList.remove('open'); overlay.classList.remove('show'); }
+    toggle.addEventListener('click', openDrawer);
+    overlay.addEventListener('click', closeDrawer);
+  })();
+</script>

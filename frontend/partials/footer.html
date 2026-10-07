@@ -1,0 +1,47 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="sprocket-stripe thin mb-16" style="border-radius:8px; margin-bottom:34px;"></div>
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:12px;"><span class="mark">🐯</span> TUMU <span class="hi">TIGER</span></div>
+        <p class="text-dim small">Maktaba kubwa ya filamu — mahali unapopata, kuomba na kufuatilia filamu unazozipenda, kwa urahisi na kwa haraka.</p>
+      </div>
+      <div>
+        <h4>Tovuti</h4>
+        <ul>
+          <li><a href="/frontend/index.html">Nyumbani</a></li>
+          <li><a href="/frontend/pages/movies.html">Filamu Zote</a></li>
+          <li><a href="/frontend/pages/track.html">Fuatilia Ombi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Akaunti</h4>
+        <ul>
+          <li><a href="/frontend/pages/login.html">Ingia</a></li>
+          <li><a href="/frontend/pages/register.html">Jisajili</a></li>
+          <li><a href="/frontend/pages/forgot-password.html">Umesahau Nenosiri?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Wasiliana Nasi</h4>
+        <ul>
+          <li class="text-dim">📞 +255 628 828 678</li>
+          <li class="text-dim">✉️ tumutiger@gmail.com</li>
+          <li class="text-dim">📍 Mbeya, Tanzania</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="footerYear"></span> TUMU TIGER. Haki zote zimehifadhiwa.</span>
+      <span>Imetengenezwa kwa 🧡 kwa ajili ya wapenzi wa filamu</span>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+  (function () {
+    document.querySelectorAll('.site-footer [href^="/frontend/"]').forEach(function (a) {
+      a.setAttribute('href', TT.FRONTEND_BASE + a.getAttribute('href').replace('/frontend', ''));
+    });
+  })();
+</script>
